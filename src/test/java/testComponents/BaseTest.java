@@ -42,8 +42,8 @@ public class BaseTest {
     	FileInputStream fis = new FileInputStream(file);
     	prop.load(fis);
     	 boolean headlessRun = prop.getProperty("HeadlessRun").equalsIgnoreCase("yes") ;
-    	 System.out.println(browserName);
-    	if (browserName.equalsIgnoreCase("chrome")) {
+
+    	 if (browserName.equalsIgnoreCase("chrome")) {
     		 ChromeOptions options = new ChromeOptions();
 		    	 if ( headlessRun) {
 		    	        options.addArguments("--headless");
