@@ -11,7 +11,7 @@ public class LoginErrorValidationTest extends BaseTest{
 	String userName ="satishraj@gmail.com" ,  password = "Raja1234" ;
 	
 	@Test
-	public void loginErrorValidation() {
+	public void loginErrorValidation()   {
 		loginPage.LoginApplication( userName, password);
 		Assert.assertEquals(loginPage.loginErrorValidation(),"Incorrect email or password.","Login Error Message Validation Failed. ");
 		System.out.println("Login Error Message Validation Completed");

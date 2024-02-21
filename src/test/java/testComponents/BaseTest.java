@@ -45,25 +45,31 @@ public class BaseTest {
 
     	 if (browserName.equalsIgnoreCase("chrome")) {
     		 ChromeOptions options = new ChromeOptions();
+  		 
 		    	 if ( headlessRun) {
 		    	        options.addArguments("--headless");
+		    	        options.addArguments("window-size=1920,1080");
 		    	 } 
-		    		 driver = new ChromeDriver(options);		   	 
+		    		 driver = new ChromeDriver(options);		  
+		    	        driver.manage().window().maximize();
     	} else if (browserName.equalsIgnoreCase("firefox")) {
            FirefoxOptions options = new FirefoxOptions();
            if ( headlessRun) {    	
-	    		 options.addArguments("--headless");         
+	    		 options.addArguments("--headless"); 
+	    		 options.addArguments("window-size=1920,1080");
 	    	 } 
 	    		 driver = new FirefoxDriver(options);
+	    	        driver.manage().window().maximize();
     	} else if (browserName.equalsIgnoreCase("edge")) {
             EdgeOptions options = new EdgeOptions();
             if ( headlessRun) {    	   
-               options.addArguments("--headless");           
+               options.addArguments("headless");    
+               options.addArguments("window-size=1920,1080");
     	    	 } 
     	        	    driver = new EdgeDriver(options);
+    	                driver.manage().window().maximize();
     	    	 }
     	
-        driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         return driver;	
@@ -81,7 +87,7 @@ public class BaseTest {
     
     @AfterMethod
     public void closeApplication() {
-    	driver.close();
+    	driver.quit();
     	System.out.println("Successfully Closed Application");
     }
     
@@ -118,8 +124,6 @@ public class BaseTest {
 		extent.setSystemInfo("Tester","Satish Raja");
 		return extent ;
 	}
-	
-	
 	
     
 }
