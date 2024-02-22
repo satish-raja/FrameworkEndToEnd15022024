@@ -19,7 +19,7 @@
   </properties>
 
   <dependencies>
-	  
+	  	  
 	  <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 <dependency>
     <groupId>io.cucumber</groupId>
@@ -33,7 +33,6 @@
     <artifactId>cucumber-testng</artifactId>
     <version>7.14.1</version>
 </dependency>
-
 	  
 <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 <dependency>
@@ -56,7 +55,6 @@
     <version>5.6.2</version>
 </dependency>
 
-
 <!-- https://mvnrepository.com/artifact/org.testng/testng -->
 <dependency>
     <groupId>org.testng</groupId>
@@ -72,11 +70,9 @@
     <version>2.16.0</version>
 </dependency>
 
-
   </dependencies>
   
-<profiles>
-	  
+<profiles>	  
 	  	<profile>
 		  <id>CucumberTests</id>
 		  		<build>
@@ -136,6 +132,7 @@
     			</pluginManagement>
     			</build>
 	  	</profile>
+	  	
 	  	  <profile>
 		  <id>Regression</id>
 		  		<build>
@@ -155,6 +152,7 @@
     			</pluginManagement>
     			</build>
 	  	</profile>
+	  	
 		<profile>
   		  <id>OrderHistory</id>
 		  		<build>
@@ -198,8 +196,7 @@
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-      <plugins>
-		  
+      <plugins>		  
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-surefire-plugin</artifactId>
@@ -244,9 +241,9 @@
         <plugin>
           <artifactId>maven-project-info-reports-plugin</artifactId>
           <version>3.0.0</version>
-        </plugin>
-        
+        </plugin>        
       </plugins>
     </pluginManagement>
+    
   </build>
 </project>
