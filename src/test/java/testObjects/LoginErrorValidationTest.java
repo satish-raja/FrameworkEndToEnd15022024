@@ -4,9 +4,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import testComponents.BaseTest;
+import testComponents.BaseTest2;
 
-public class LoginErrorValidationTest extends BaseTest{
+public class LoginErrorValidationTest extends BaseTest2{
 	WebDriver driver ;
 	String userName ="satishraj@gmail.com" ,  password = "Raja1234" ;
 	

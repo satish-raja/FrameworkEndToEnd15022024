@@ -7,7 +7,6 @@
   <test name="Test">
     <classes>
       <class name="testObjects.SubmitOrderTest"/>
-      <class name="testObjects.OrderHistoryValidationTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

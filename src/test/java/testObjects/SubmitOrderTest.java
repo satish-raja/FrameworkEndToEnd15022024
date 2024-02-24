@@ -10,8 +10,9 @@ import pageObjects.OrderHistoryPage;
 import pageObjects.PaymentPage;
 import pageObjects.ProductCataloguePage;
 import testComponents.BaseTest;
+import testComponents.BaseTest2;
 
-public class SubmitOrderTest  extends BaseTest{
+public class SubmitOrderTest  extends BaseTest2{
 	WebDriver driver ;
 	String orderId ;
 	String productName ;
