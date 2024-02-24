@@ -22,7 +22,6 @@ public class SubmitOrderTest  extends BaseTest2{
 	
 	@Test(dataProvider ="getData" ,dataProviderClass = BaseTest.class)
 	public void submitOrder(HashMap<String, String > input) {
-//	public void submitOrder(String userName, String password, String productName) {
 		ProductCataloguePage productCatalogue = loginPage.LoginApplication(input.get("userId"),input.get("password"));
 		CartPage cartPage = productCatalogue.addProductToCart(input.get("productName"));
 		cartPage.verifyProductdisplay(input.get("productName"));
