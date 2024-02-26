@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">7 methods,   7 passed</span>
+                    <span class="method-stats">7 methods, 1 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testObjects.LoginErrorValidationTest" class="method navigator-link" hash-for-method="loginErrorValidation">loginErrorValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,22 +117,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testObjects.LoginErrorValidationTest" class="method navigator-link" hash-for-method="loginErrorValidation">loginErrorValidation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testObjects.SubmitOrderTest" class="method navigator-link" hash-for-method="orderHistoryValidation({userId=anshika@gmail.com, password=Iamking@000, productName=ZARA COAT 3})">orderHistoryValidation({userId=anshika@gmail.com, password=Iamking@000, productName=ZARA COAT 3})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testObjects.SubmitOrderTest" class="method navigator-link" hash-for-method="orderHistoryValidation({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL})">orderHistoryValidation({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testObjects.SubmitOrderTest" class="method navigator-link" hash-for-method="orderHistoryValidation({userId=chittyraja@gmail.com, password=Test1234, productName=IPHONE 13 PRO})">orderHistoryValidation({userId=chittyraja@gmail.com, password=Test1234, productName=IPHONE 13 PRO})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testObjects.SubmitOrderTest" class="method navigator-link" hash-for-method="orderHistoryValidation({userId=chittyraja@gmail.com, password=Test1234, productName=IPHONE 13 PRO})">orderHistoryValidation({userId=chittyraja@gmail.com, password=Test1234, productName=IPHONE 13 PRO})</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testObjects.SubmitOrderTest" class="method navigator-link" hash-for-method="orderHistoryValidation({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL})">orderHistoryValidation({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -148,6 +157,30 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testObjects.LoginErrorValidationTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="loginErrorValidation">
+                  </a> <!-- loginErrorValidation -->
+                  <span class="method-name">loginErrorValidation</span>
+                  <div class="stack-trace">java.lang.AssertionError: Login Error Message Validation Failed.  expected [Incorrect email or password.] but found [Login Successfully]
+	at testObjects.LoginErrorValidationTest.loginErrorValidation(LoginErrorValidationTest.java:16)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -164,18 +197,18 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="orderHistoryValidation({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL})">
-                  </a> <!-- orderHistoryValidation({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL}) -->
-                  <span class="method-name">orderHistoryValidation</span>
-                  <span class="parameters">({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="orderHistoryValidation({userId=chittyraja@gmail.com, password=Test1234, productName=IPHONE 13 PRO})">
                   </a> <!-- orderHistoryValidation({userId=chittyraja@gmail.com, password=Test1234, productName=IPHONE 13 PRO}) -->
                   <span class="method-name">orderHistoryValidation</span>
                   <span class="parameters">({userId=chittyraja@gmail.com, password=Test1234, productName=IPHONE 13 PRO})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="orderHistoryValidation({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL})">
+                  </a> <!-- orderHistoryValidation({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL}) -->
+                  <span class="method-name">orderHistoryValidation</span>
+                  <span class="parameters">({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -200,21 +233,6 @@
                   </a> <!-- submitOrder({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL}) -->
                   <span class="method-name">submitOrder</span>
                   <span class="parameters">({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testObjects.LoginErrorValidationTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="loginErrorValidation">
-                  </a> <!-- loginErrorValidation -->
-                  <span class="method-name">loginErrorValidation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -286,36 +304,36 @@ data.addRows(7);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'submitOrder')
 data.setCell(0, 2, 'testObjects.SubmitOrderTest')
-data.setCell(0, 3, 4673);
+data.setCell(0, 3, 10747);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'submitOrder')
 data.setCell(1, 2, 'testObjects.SubmitOrderTest')
-data.setCell(1, 3, 4454);
+data.setCell(1, 3, 10601);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'submitOrder')
 data.setCell(2, 2, 'testObjects.SubmitOrderTest')
-data.setCell(2, 3, 4341);
+data.setCell(2, 3, 10601);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'orderHistoryValidation')
 data.setCell(3, 2, 'testObjects.SubmitOrderTest')
-data.setCell(3, 3, 850);
+data.setCell(3, 3, 630);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'orderHistoryValidation')
 data.setCell(4, 2, 'testObjects.SubmitOrderTest')
-data.setCell(4, 3, 797);
+data.setCell(4, 3, 620);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'orderHistoryValidation')
 data.setCell(5, 2, 'testObjects.SubmitOrderTest')
-data.setCell(5, 3, 762);
+data.setCell(5, 3, 611);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'loginErrorValidation')
 data.setCell(6, 2, 'testObjects.LoginErrorValidationTest')
-data.setCell(6, 3, 419);
+data.setCell(6, 3, 470);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 49 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -351,89 +369,91 @@ return data;
               <div class="chronological-class-name">testObjects.SubmitOrderTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">209 ms</span>
+                <span class="method-start">149 ms</span>
               </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">submitOrder({userId=anshika@gmail.com, password=Iamking@000, productName=ZARA COAT 3})</span>
+                <span class="method-start">2452 ms</span>
+              </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testObjects.LoginErrorValidationTest</div> <!-- chronological-class-name -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">loginErrorValidation</span>
-                <span class="method-start">2536 ms</span>
+                <span class="method-start">2474 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeApplication</span>
-                <span class="method-start">2958 ms</span>
+                <span class="method-start">3374 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testObjects.SubmitOrderTest</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">submitOrder({userId=anshika@gmail.com, password=Iamking@000, productName=ZARA COAT 3})</span>
-                <span class="method-start">4553 ms</span>
-              </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeApplication</span>
-                <span class="method-start">9227 ms</span>
+                <span class="method-start">13200 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">9355 ms</span>
+                <span class="method-start">13309 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">submitOrder({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL})</span>
-                <span class="method-start">10153 ms</span>
+                <span class="method-start">16546 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeApplication</span>
-                <span class="method-start">14607 ms</span>
+                <span class="method-start">27147 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">14689 ms</span>
+                <span class="method-start">27266 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">submitOrder({userId=chittyraja@gmail.com, password=Test1234, productName=IPHONE 13 PRO})</span>
-                <span class="method-start">15412 ms</span>
+                <span class="method-start">30715 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeApplication</span>
-                <span class="method-start">19754 ms</span>
+                <span class="method-start">41316 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">19832 ms</span>
+                <span class="method-start">41423 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">orderHistoryValidation({userId=anshika@gmail.com, password=Iamking@000, productName=ZARA COAT 3})</span>
-                <span class="method-start">21356 ms</span>
+                <span class="method-start">43313 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeApplication</span>
-                <span class="method-start">22119 ms</span>
+                <span class="method-start">43944 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">22195 ms</span>
+                <span class="method-start">44047 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">orderHistoryValidation({userId=satishraja@gmail.com, password=Raja1234, productName=ADIDAS ORIGINAL})</span>
-                <span class="method-start">23683 ms</span>
+                <span class="method-start">45926 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeApplication</span>
-                <span class="method-start">24480 ms</span>
+                <span class="method-start">46537 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">launchApplication</span>
-                <span class="method-start">24557 ms</span>
+                <span class="method-start">46633 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">orderHistoryValidation({userId=chittyraja@gmail.com, password=Test1234, productName=IPHONE 13 PRO})</span>
-                <span class="method-start">25281 ms</span>
+                <span class="method-start">48522 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeApplication</span>
-                <span class="method-start">26132 ms</span>
+                <span class="method-start">49143 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

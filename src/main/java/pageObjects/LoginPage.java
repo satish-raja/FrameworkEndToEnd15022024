@@ -28,15 +28,14 @@ public class LoginPage extends BasePage{
 	@FindBy(id ="toast-container")
 	WebElement loginErrorMessage ;
 	
-//	By loginPageMessage = By.id("toast-container");
-	By loginPageMessage = By.xpath("//div[@role='alert']");
+	By loginPageMessage = By.id("toast-container");
+//	By loginPageMessage = By.xpath("//div[@role='alert']");
 	
 	
 	public ProductCataloguePage LoginApplication(String userName, String password)  {
 		userEmail.sendKeys(userName);
 		userPassword.sendKeys(password);
 		submit.click();
-	System.out.println("Successfully Login into Application");
 	return new ProductCataloguePage(driver);
 	}
 	

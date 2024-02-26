@@ -30,12 +30,12 @@ public class BasePage {
 	By loginPageMessage = By.id("toast-container");
 	
 	public void waitForElementToAppear( By findBy) {
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
 	}
 	
 	public void waitForElementToDisappear( By findBy) {
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	wait.until(ExpectedConditions.invisibilityOfElementLocated(findBy));
 	}
 	

@@ -57,6 +57,7 @@ public class BaseTest2 {
 					driver = new RemoteWebDriver(new URI("http://localhost:4444").toURL(), options);
 					} else {
 		          driver = new ChromeDriver(options);
+		          driver.manage().window().maximize();
 					}
              } else if (browserName.equalsIgnoreCase("firefox")) {
                  FirefoxOptions options = new FirefoxOptions();
@@ -68,6 +69,7 @@ public class BaseTest2 {
 					driver = new RemoteWebDriver(new URI("http://localhost:4444").toURL(), options);
 					} else {
 		                 driver = new FirefoxDriver(options);
+		                 driver.manage().window().maximize();
 					}
 
              } else if (browserName.equalsIgnoreCase("edge")) {
@@ -80,6 +82,7 @@ public class BaseTest2 {
 					driver = new RemoteWebDriver(new URI("http://localhost:4444").toURL(), options);
 					} else {
 		                 driver = new EdgeDriver(options);
+		                 driver.manage().window().maximize();
 					}
 
 
@@ -88,7 +91,7 @@ public class BaseTest2 {
              }
     	
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         return driver;	
        }
 

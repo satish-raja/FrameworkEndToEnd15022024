@@ -8,7 +8,7 @@ import testComponents.BaseTest2;
 
 public class LoginErrorValidationTest extends BaseTest2{
 	WebDriver driver ;
-	String userName ="satishraj@gmail.com" ,  password = "Raja1234" ;
+	String userName ="satishraja@gmail.com" ,  password = "Raja1234" ;
 	
 	@Test
 	public void loginErrorValidation()   {

@@ -24,10 +24,17 @@ public class ProductCataloguePage  extends BasePage{
 	@FindBy(css =".logo-holder.logo-7" )
 	WebElement productPage;
 	
+	@FindBy(id ="toast-container")
+	WebElement loginMessage ;
+	
 	By toastMessage = By.id("toast-container");
 	By productCatalogue = By.tagName("app-dashboard");
+	By toastSuccessMessage = By.xpath("//div[@aria-label='Login Successfully']");
 	
 	public CartPage addProductToCart(String productName) {
+		waitForElementToAppear(toastSuccessMessage);
+		waitForElementToDisappear(toastSuccessMessage);
+	System.out.println("Successfully Login into Application");			
 		waitForElementToAppear(productCatalogue);
 		driver.findElement(By.xpath("//b[text()='" + productName + "']/parent::h5/following-sibling::button[2]")).click();
 		waitForElementToAppear(toastMessage);
