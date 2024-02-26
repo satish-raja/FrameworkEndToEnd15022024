@@ -203,7 +203,7 @@
 			<version>3.2.2</version>
 			<configuration>
 				<suiteXmlFiles>
-					<suiteXmlFile>testSuite\parallelTest.xml</suiteXmlFile>
+					<suiteXmlFile>testSuite\testng.xml</suiteXmlFile>
 				</suiteXmlFiles>
 			</configuration>
 		</plugin>		  
